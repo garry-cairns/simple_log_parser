@@ -3,11 +3,11 @@
 
 import sys
 import os.path
-from parser.line_parser import parse_file
+from parser.line_parser import get_file
 
 def main(*args):
     """
-    Takes a file from 
+    Takes a file path passed in by the user and processes it, returning statistics.
     """
 
     if len(sys.argv) == 1:
@@ -23,7 +23,7 @@ def main(*args):
         ]))
 
 
-    print(parse_file(sys.argv[1]))
+    print(get_file(sys.argv[1]))
     sys.exit(1) 
 
 
